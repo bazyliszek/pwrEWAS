@@ -171,6 +171,9 @@ loadDataset <- function(tissueType){
                         if(tissueType == "Sperm"){
                           methPara <- ExperimentHub::ExperimentHub()[["EH3079"]]
                         } else
+                          if(tissueType =="SerumWGBS"){
+                          methPara <- load("SerumWGBS.Rds")
+                          } else
                           stop("Tissue type not found")
   return(methPara)
 }
