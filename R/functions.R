@@ -177,6 +177,6 @@ loadDataset <- function(tissueType){
                           } else
                           stop("Tissue type not found")
   '''
-  methPara <- load("SerumWGBS.Rds")
+  methPara <- readRDS("Serum.RDS")
   return(methPara)
 }
