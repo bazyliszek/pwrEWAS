@@ -131,6 +131,7 @@ getK <- function(targetDmCpGs, methPara, detectionLimit, J, CpGonArray, tau){
 
 
 loadDataset <- function(tissueType){
+''' 
   BiocManager::install(version='devel', update = TRUE, ask = FALSE)
   BiocManager::install("ExperimentHub", update = TRUE, ask = FALSE)
   
@@ -175,5 +176,7 @@ loadDataset <- function(tissueType){
                           methPara <- load("SerumWGBS.Rds")
                           } else
                           stop("Tissue type not found")
+  '''
+  methPara <- load("SerumWGBS.Rds")
   return(methPara)
 }
