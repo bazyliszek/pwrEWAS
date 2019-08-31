@@ -131,6 +131,6 @@ getK <- function(targetDmCpGs, methPara, detectionLimit, J, CpGonArray, tau){
 
 
 loadDataset <- function(tissueType){
-  methPara <- readRDS("Serum.RDS")
+  methPara <- load("Saliva.rdata")
   return(methPara)
 }
